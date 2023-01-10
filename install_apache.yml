@@ -14,7 +14,7 @@
     when: ansible_distribution == "Ubuntu"
 
 
-  - name: install apache and php for Rocky Linux servers
+  - name: install httpd and php for Rocky Linux servers
     dnf:
       name:
         - httpd
