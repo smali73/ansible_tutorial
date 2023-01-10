@@ -23,7 +23,7 @@
   tasks:
 
   - name: install apache and php for Ubuntu servers
-    tags: apache,apache2,ubuntu
+    tags: apache2,php,ubuntu
     apt:
       name:
         - apache2
@@ -33,7 +33,7 @@
     when: ansible_distribution == "Ubuntu"
 
   - name: install httpd and php for Rocky Linux servers
-    tags: httpd,rocky,php
+    tags: httpd,php,rocky
     dnf:
       name:
         - httpd
@@ -48,7 +48,7 @@
   tasks:
 
   - name: install mariadb package (Rocky Linux)
-    tags: rocky,db,mariadb
+    tags: db,mariadb,rocky
     dnf:
       name: mariadb
       state: latest
